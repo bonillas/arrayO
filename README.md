@@ -45,3 +45,33 @@ Then you can use it Importing the functions and using them like this:
     }, null, true))
 
 ## Directly on browser
+
+Use the file in this project located at `src/array0-web.min.js` .
+
+Then in your HTML file do something like this:
+
+    <script  src="src/array0-web.min.js"></script>
+    <script>
+    //Example usage
+    
+    var obj = {
+    a: "5",
+    b: "10",
+    c: "15"
+    };
+    
+    console.log(arrayO.filterObject(obj, n => n >=  10))
+    
+    console.log(arrayO.sortObject(obj, (a, b) => b - a))
+  
+    console.log(arrayO.mapObject(obj, n => n = n +  10, false))    
+    
+    console.log(arrayO.reduceObject(obj, (accumulator, currentValue) => {
+    return accumulator + currentValue
+    }, null, true))
+    
+    </script>
+
+# How to use the functions.
+## mapO
+The function
