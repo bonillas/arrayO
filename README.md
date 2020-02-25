@@ -163,3 +163,11 @@ Example:
     }, null)
         //returns  52015
 
+### Author
+
+**Alejandro Bonillas**
+
+* [github/bonillas](https://github.com/bonillas)
+* [linkedin/in/bonillas](https://www.linkedin.com/in/bonillas/)
+
+### License
