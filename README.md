@@ -80,6 +80,22 @@ Then in your HTML file do something like this:
     </script>
 
 # How to use the functions.
-## mapO()
-The function
+## mapO(object, function, isKeys)
+The function works just like map function method of an Array.
+
+**PARAMETERS**
+
+1) ***Object***: The first parameter is the object you want to apply the mapping to.
+2) ***Function callback***: The second parameter is the callback you want to apply to each element of the object.
+2) ***isKeys***: The third parameter indicates whether you want to apply the mapping to the Values of the Object, or the Keys of the Object. By default it is set to false which means it applies it to the values of the object.
+
+Example:
+
+    mapObject(obj, n => n = n +  10)
+    //returns { b: '510', a: '2010', c: '1510' }
+
+    //Or if we set third parameter, we do the mapping on the keys
+    mapObject(obj, n => n = n +  10, true)
+    //returns { b10: '5', a10: '20', c10: '15' }
+
 
