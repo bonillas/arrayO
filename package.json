@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "arrayo",
+  "version": "1.0.0",
+  "description": "arrayO arrayObject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-modules index.js"
+  },
+  "keywords": [
+    "array",
+    "object"
+  ],
+  "author": "alejandro bonillas",
+  "license": "ISC"
+}
