@@ -27,51 +27,52 @@ function _arrayWithoutHoles(arr) {
   }
 }
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
-
 var arrayO = (function() {
   var arrayO = {};
 
-  arrayO.mapObject = function(object, fn) {
-    var obj = Object.assign({}, object);
+  arrayO.mapObject = function(object, fn, keys) {
+    var arr = Object.entries(object);
+    arr = arr.map(function(n, i) {
+      if (keys) {
+        n[0] = fn(n[0], i);
+      } else {
+        n[1] = fn(n[1], i);
+      }
 
-    for (var key in obj) {
-      obj[key] = fn(obj[key]);
-    }
-
-    return obj;
+      return n;
+    });
+    var objArr = arr.map(function(n) {
+      var ret = {};
+      ret[n[0]] = n[1];
+      return ret;
+    });
+    return Object.assign.apply(Object, [{}].concat(_toConsumableArray(objArr)));
   };
 
-  arrayO.filterObject = function(object, fn) {
-    var arr = Object.keys(object).filter(function(key) {
-      return fn(object[key]);
+  arrayO.filterObject = function(object, fn, keys) {
+    var arr = Object.entries(object);
+    arr = arr.filter(function(n, i) {
+      return keys ? fn(n[0], i) : fn(n[1], i);
     });
-    arr = arr.map(function(key) {
-      return _defineProperty({}, key, object[key]);
+    var objArr = arr.map(function(n) {
+      var ret = {};
+      ret[n[0]] = n[1];
+      return ret;
     });
-    return Object.assign.apply(Object, [{}].concat(_toConsumableArray(arr)));
+    return Object.assign.apply(Object, [{}].concat(_toConsumableArray(objArr)));
   };
 
-  arrayO.sortObject = function(object, fn) {
-    var arr = Object.keys(object).sort(function(a, b) {
-      return fn(object[a], object[b]);
+  arrayO.sortObject = function(object, fn, keys) {
+    var arr = Object.entries(object);
+    arr.sort(function(a, b) {
+      return keys ? fn(a[0], b[0]) : fn(a[1], b[1]);
     });
-    arr = arr.map(function(key) {
-      return _defineProperty({}, key, object[key]);
+    var objArr = arr.map(function(n) {
+      var ret = {};
+      ret[n[0]] = n[1];
+      return ret;
     });
-    return Object.assign.apply(Object, [{}].concat(_toConsumableArray(arr)));
+    return Object.assign.apply(Object, [{}].concat(_toConsumableArray(objArr)));
   };
 
   arrayO.reduceObject = function(object, fn, initialValue, keys) {

@@ -13,7 +13,7 @@ console.log(arrayO.filterObject(obj, n => n >= 10))
 
 console.log(arrayO.sortObject(obj, (a, b) => b - a))
 
-console.log(arrayO.mapObject(obj, n => n = n + 10))
+console.log(arrayO.mapObject(obj, n => n = n + 10, false))
 
 console.log(arrayO.reduceObject(obj, (accumulator, currentValue) => {
     return accumulator + currentValue

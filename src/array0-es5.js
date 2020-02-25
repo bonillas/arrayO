@@ -1,4 +1,8 @@
-export const mapObject = (object, fn, keys) => {
+
+var arrayO = (function() {
+    var arrayO = {};
+
+    arrayO.mapObject = (object, fn, keys) => {
 
     let arr = Object.entries(object)
     arr = arr.map((n, i) => {
@@ -18,7 +22,7 @@ export const mapObject = (object, fn, keys) => {
 
 }
 
-export const filterObject = (object, fn, keys) => {
+  arrayO.filterObject = (object, fn, keys) => {
 
     let arr = Object.entries(object)
     arr = arr.filter((n, i) => keys ? fn(n[0], i) : fn(n[1], i))
@@ -31,7 +35,7 @@ export const filterObject = (object, fn, keys) => {
 
 }
 
-export const sortObject = (object, fn, keys) => {
+ arrayO.sortObject = (object, fn, keys) => {
 
     let arr = Object.entries(object)
     arr.sort((a, b) => keys ? fn(a[0], b[0]) : fn(a[1], b[1]))
@@ -44,11 +48,12 @@ export const sortObject = (object, fn, keys) => {
 
 }
 
-export const reduceObject = (object, fn, initialValue, keys) => {
+ arrayO.reduceObject = (object, fn, initialValue, keys) => {
 
     const arr = !keys ? Object.values(object) : Object.keys(object)
     return initialValue ? arr.reduce(fn, initialValue) : arr.reduce(fn)
 
 }
 
-
+return arrayO;
+})();

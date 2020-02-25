@@ -2,14 +2,14 @@ import  {filterObject, sortObject, mapObject, reduceObject}  from './src/arrayO.
 
 //Example usage
 const obj = {
-    a: "5",
-    b: "10",
+    b: "5",
+    a: "20",
     c: "15"
 }
 
 console.log(filterObject(obj, n => n >= 10))
 
-console.log(sortObject(obj, (a, b) => b - a))
+console.log(sortObject(obj, (a, b) => b-a))
 
 console.log(mapObject(obj, n => n = n + 10))
 
