@@ -27,14 +27,16 @@ Then you can use it Importing the functions and using them like this:
       
     
     console.log(filterObject(obj, n => n >=  10))
-    
+    //outputs { a: '20', c: '15' }
       
     
     console.log(sortObject(obj, (a, b) => b-a))
+    //outputs { a: '20', c: '15', b: '5' }
     
       
     
     console.log(mapObject(obj, n => n = n +  10))
+    //outputs { b: '510', a: '2010', c: '1510' }
     
       
     
@@ -42,7 +44,8 @@ Then you can use it Importing the functions and using them like this:
     
     return accumulator + currentValue
     
-    }, null, true))
+    }, null))
+    //outputs 52015
 
 ## Directly on browser
 
@@ -61,17 +64,22 @@ Then in your HTML file do something like this:
     };
     
     console.log(arrayO.filterObject(obj, n => n >=  10))
+    //outputs { a: '20', c: '15' }
     
     console.log(arrayO.sortObject(obj, (a, b) => b - a))
+    //outputs { a: '20', c: '15', b: '5' }
   
     console.log(arrayO.mapObject(obj, n => n = n +  10, false))    
+    //outputs { b: '510', a: '2010', c: '1510' }
     
     console.log(arrayO.reduceObject(obj, (accumulator, currentValue) => {
     return accumulator + currentValue
-    }, null, true))
+    }, null))
+    //outputs 52015
     
     </script>
 
 # How to use the functions.
-## mapO
+## mapO()
 The function
+
