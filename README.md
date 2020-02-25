@@ -81,7 +81,7 @@ Then in your HTML file do something like this:
 
 # How to use the functions.
 ## mapO(object, function, isKeys)
-The function works just like map function method of an Array.
+The function works just like MAP function method of an Array.
 
 **PARAMETERS**
 
@@ -98,4 +98,22 @@ Example:
     mapObject(obj, n => n = n +  10, true)
     //returns { b10: '5', a10: '20', c10: '15' }
 
+
+## filterO(object, function, isKeys)
+The function works just like FILTER function method of an Array.
+
+**PARAMETERS**
+
+1) ***Object***: The first parameter is the object you want to apply the filtering to.
+2) ***Function callback***: The second parameter is the callback you want to apply to each element of the object.
+2) ***isKeys***: The third parameter indicates whether you want to apply the filtering to the Values of the Object, or the Keys of the Object. By default it is set to false which means it applies it to the values of the object.
+
+Example:
+
+    filterObject(obj, n => n >=  10)
+    //returns { a: '20', c: '15' }
+
+    //Or if we set third parameter, we do the filtering on the keys
+    filterObject(obj, n =>n=="c", true)
+    //returns { c: '15' }
 
