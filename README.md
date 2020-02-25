@@ -80,7 +80,7 @@ Then in your HTML file do something like this:
     </script>
 
 # How to use the functions.
-## mapO(object, function, isKeys)
+## mapObject(object, function, isKeys)
 The function works just like MAP function method of an Array.
 
 **PARAMETERS**
@@ -91,6 +91,8 @@ The function works just like MAP function method of an Array.
 
 Example:
 
+    const obj = { b: "5", a: "20",c: "15"}
+    
     mapObject(obj, n => n = n +  10)
     //returns { b: '510', a: '2010', c: '1510' }
 
@@ -99,7 +101,7 @@ Example:
     //returns { b10: '5', a10: '20', c10: '15' }
 
 
-## filterO(object, function, isKeys)
+## filterObject(object, function, isKeys)
 The function works just like FILTER function method of an Array.
 
 **PARAMETERS**
@@ -110,10 +112,32 @@ The function works just like FILTER function method of an Array.
 
 Example:
 
+    const obj = { b: "5", a: "20",c: "15"}
+    
     filterObject(obj, n => n >=  10)
     //returns { a: '20', c: '15' }
 
     //Or if we set third parameter, we do the filtering on the keys
     filterObject(obj, n =>n=="c", true)
     //returns { c: '15' }
+
+
+## sortObject(object, function, isKeys)
+The function works just like FILTER function method of an Array.
+
+**PARAMETERS**
+
+1) ***Object***: The first parameter is the object you want to apply the filtering to.
+2) ***Function callback***: The second parameter is the callback you want to apply to each element of the object.
+2) ***isKeys***: The third parameter indicates whether you want to apply the filtering to the Values of the Object, or the Keys of the Object. By default it is set to false which means it applies it to the values of the object.
+
+Example:
+
+  
+
+    const obj = { b: "5", a: "20",c: "15"}
+    
+    sortObject(obj, (a, b) => b-a)
+    //returns  {a: '20', c: '15', b: '5' }
+
 
