@@ -1,5 +1,4 @@
-
-![enter image description here](https://raw.githubusercontent.com/bonillas/arrayO/master/logo/ArrayO.png)
+   ![enter image description here](https://raw.githubusercontent.com/bonillas/arrayO/master/logo/ArrayO.png)
 
 # ArrayO.js - What is it?
 
@@ -140,4 +139,27 @@ Example:
     sortObject(obj, (a, b) => b-a)
     //returns  {a: '20', c: '15', b: '5' }
 
+
+## reduceObject(object, function, accum,  isKeys)
+The function works just like REDUCE function method of an Array.
+
+**PARAMETERS**
+
+1) ***Object***: The first parameter is the object you want to apply the reducing to.
+2) ***Function callback***: The second parameter is the callback you want to apply to each element of the object.
+3) ***initial*** (Optional) The initial value of the reduce function
+4) ***isKeys***: The fourth parameter indicates whether you want to apply the reducing to the Values of the Object, or the Keys of the Object. By default it is set to false which means it applies it to the values of the object.
+
+Example:
+
+  
+
+    const obj = { b: "5", a: "20",c: "15"}
+    
+    reduceObject(obj, (accumulator, currentValue) => {
+    
+    return accumulator + currentValue
+    
+    }, null)
+        //returns  52015
 
