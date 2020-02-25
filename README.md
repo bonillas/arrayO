@@ -177,3 +177,5 @@ Example:
 
 Please whoever fork it, change it, correct it, let me know, its a work in progress. Its open source :)
 ## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
