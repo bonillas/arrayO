@@ -1,0 +1,21 @@
+<script src="src/array0-web.min.js"></script>
+<script>
+
+
+//Example usage
+var obj = {
+  a: "5",
+  b: "10",
+  c: "15"
+};
+
+console.log(arrayO.filterObject(obj, n => n >= 10))
+
+console.log(arrayO.sortObject(obj, (a, b) => b - a))
+
+console.log(arrayO.mapObject(obj, n => n = n + 10))
+
+console.log(arrayO.reduceObject(obj, (accumulator, currentValue) => {
+    return accumulator + currentValue
+}, null, true))
+</script>
