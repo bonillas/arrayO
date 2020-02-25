@@ -3,7 +3,9 @@
 
 # ArrayO.js - What is it?
 
- Library for using the HighOrder Javascript Array functions  like Filter, Map, Sort  and Reduce but in Objects.
+As a Javascript Developer, have you ever tried to run an  MAP, FILTER, SORT or REUCE method on an Object?...Neither have I ( :P ), but anyways I created this library for that.
+
+This library is for using the HighOrder Javascript Array functions  like Filter, Map, Sort  and Reduce but in Objects.
 
 # Getting started
 
