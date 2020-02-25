@@ -1,4 +1,5 @@
-   ![enter image description here](https://raw.githubusercontent.com/bonillas/arrayO/master/logo/ArrayO.png)
+
+![enter image description here](https://raw.githubusercontent.com/bonillas/arrayO/master/logo/ArrayO.png)
 
 # ArrayO.js - What is it?
 
@@ -163,11 +164,16 @@ Example:
     }, null)
         //returns  52015
 
-### Author
+
+## Author
 
 **Alejandro Bonillas**
 
 * [github/bonillas](https://github.com/bonillas)
 * [linkedin/in/bonillas](https://www.linkedin.com/in/bonillas/)
 
-### License
+
+## Contributing
+
+Please whoever fork it, change it, correct it, let me know, its a work in progress. Its open source :)
+## License
