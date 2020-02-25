@@ -1,3 +1,10 @@
+
+![enter image description here](https://raw.githubusercontent.com/bonillas/arrayO/master/logo/ArrayO.png)
+
+# ArrayO.js - What is it?
+
+ Library for using the HighOrder Javascript Array functions  like Filter, Map, Sort  and Reduce but in Objects.
+
 # Getting started
 
 ## For ES6 Version
