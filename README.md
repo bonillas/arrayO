@@ -143,7 +143,7 @@ Example:
     //returns  {a: '20', c: '15', b: '5' }
 
 
-## reduceObject(object, function, accum,  isKeys)
+## reduceObject(object, function, initial,  isKeys)
 The function works just like REDUCE function method of an Array.
 
 **PARAMETERS**
@@ -165,6 +165,12 @@ Example:
     
     }, null)
         //returns  52015
+        
+    reduceObject(obj, (accumulator, currentValue) => {
+    return accumulator + currentValue}, null, true)
+    //returns bac
+
+
 
 
 ## Author
